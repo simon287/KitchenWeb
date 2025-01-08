@@ -1,25 +1,36 @@
-# KitchenWeb
+# KitchenWeb - Site de Recettes Traditionnelles Françaises
 
-Site web de recettes de cuisine traditionnelles françaises.
+## À Propos
+KitchenWeb est une plateforme moderne dédiée à la cuisine française traditionnelle. Notre site présente des recettes authentiques transmises de génération en génération.
 
-## Structure
+## Fonctionnalités
+- 🔍 Recherche intuitive de recettes
+- 🏷️ Catégorisation claire (Entrées, Plats, Desserts, Boissons)
+- ⭐ Système de notation des recettes
+- ⏱️ Temps de préparation estimé
+- 📊 Niveau de difficulté
 
-- `index.html` : Page d'accueil avec la recette de la poule au pot
-
-## Technologies utilisées
-
-- HTML5
-- Tailwind CSS pour le style
-- JavaScript vanilla pour les interactions
+## Technologie
+- React.js
+- Tailwind CSS
+- Lucide Icons
 
 ## Installation
+```bash
+npm install
+npm run dev
+```
 
-1. Cloner le repository
-2. Ouvrir index.html dans un navigateur
+## Structure du Projet
+```
+src/
+  ├── components/    # Composants React
+  ├── assets/        # Images et ressources statiques
+  └── styles/        # Fichiers CSS et configuration Tailwind
+```
 
-## À venir
+## Contribution
+Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou à soumettre une pull request.
 
-- Pages de catégories (Entrées, Plats, Desserts)
-- Plus de recettes
-- Système de recherche
-- Filtres par ingrédients
+## Licence
+MIT
