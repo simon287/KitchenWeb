@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recettes de Cuisine Traditionnelle</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="#" class="flex items-center py-4">
+                            <span class="font-semibold text-gray-800 text-lg">Recettes Traditionnelles</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <div class="relative">
+                        <button onclick="toggleDropdown()" class="py-2 px-4 bg-yellow-500 hover:bg-yellow-600 text-white rounded-md">
+                            Menu des recettes
+                        </button>
+                        <div id="dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-xl z-20">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Entrées</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Plats Principaux</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Desserts</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto mt-10 px-4">
+        <article class="bg-white rounded-lg shadow-md overflow-hidden">
+            <img src="/api/placeholder/800/400" alt="Poule au pot" class="w-full h-64 object-cover">
+            <div class="p-6">
+                <h1 class="text-3xl font-bold text-gray-900 mb-4">La Poule au Pot d'Henri IV</h1>
+                <p class="text-gray-600 mb-4">
+                    Une recette traditionnelle française, symbole du règne d'Henri IV qui souhaitait que chaque famille puisse manger une poule au pot le dimanche.
+                </p>
+                
+                <div class="mb-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">Ingrédients</h2>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>1 poule de 2 kg</li>
+                        <li>4 carottes</li>
+                        <li>4 navets</li>
+                        <li>2 poireaux</li>
+                        <li>2 branches de céleri</li>
+                        <li>1 oignon piqué de 2 clous de girofle</li>
+                        <li>1 bouquet garni (thym, laurier, persil)</li>
+                        <li>Gros sel, poivre en grains</li>
+                    </ul>
+                </div>
+
+                <div class="mb-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">Préparation</h2>
+                    <ol class="list-decimal list-inside text-gray-600 space-y-2">
+                        <li>Nettoyer la poule et la mettre dans une grande marmite d'eau froide.</li>
+                        <li>Porter à ébullition et écumer soigneusement.</li>
+                        <li>Ajouter les légumes épluchés et le bouquet garni.</li>
+                        <li>Saler et poivrer.</li>
+                        <li>Laisser mijoter à feu doux pendant 2h30 environ.</li>
+                        <li>Servir la poule entourée de ses légumes, avec le bouillon en entrée.</li>
+                    </ol>
+                </div>
+
+                <div class="text-gray-600">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">Conseils</h2>
+                    <p>Pour un bouillon plus savoureux, vous pouvez ajouter quelques os de veau. Les légumes peuvent varier selon la saison et vos goûts.</p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <script>
+        function toggleDropdown() {
+            document.getElementById('dropdown').classList.toggle('hidden');
+        }
+
+        // Fermer le menu si on clique ailleurs
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-button')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (!openDropdown.classList.contains('hidden')) {
+                        openDropdown.classList.add('hidden');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
